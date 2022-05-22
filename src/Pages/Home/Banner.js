@@ -3,7 +3,7 @@ import motoBanner from '../../image/banner-removebg-preview.png'
 
 const Banner = () => {
   return (
-    <div class="hero min-h-screen bg-base-200">
+    <div class="hero min-h-screen ">
       <div class="hero-content flex-col lg:flex-row">
         <img src={motoBanner} class="max-w-sm rounded-lg shadow-2xl" alt='pic' />
         <div>

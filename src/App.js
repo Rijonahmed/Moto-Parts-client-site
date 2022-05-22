@@ -5,6 +5,8 @@ import Home from './Pages/Home/Home';
 import Reviews from './Pages/Home/Reviews';
 import NotFound from './Pages/Not-found/NotFound';
 import Navbar from './Pages/Shared/Navbar';
+import Blog from './Pages/Text-Page/Blog';
+import MyPortfolio from './Pages/Text-Page/MyPortfolio';
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/businessSummary' element={<BusinessSummary></BusinessSummary>}></Route>
         <Route path='/reviews' element={<Reviews></Reviews>}></Route>
+        <Route path='/blog' element={<Blog></Blog>}></Route>
+        <Route path='/myPortfolio' element={<MyPortfolio></MyPortfolio>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
 
