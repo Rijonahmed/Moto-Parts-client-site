@@ -1,7 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const SixParts = ({ parts }) => {
-  const { name, price, images } = parts;
+  const { _id, name, price, images, quantity, description } = parts;
+  const navigate = useNavigate();
+  const handlePurchase = id => {
+    navigate('/purchase/' + id)
+
+  }
+
   return (
     <div>
       <div class="card lg:card-side bg-base-100 shadow-xl">
@@ -10,11 +17,12 @@ const SixParts = ({ parts }) => {
 
         </figure>
         <div class="card-body">
-          <h2 class="card-title">{name}</h2>
-          <h3>Price: ${price}</h3>
-          <p>Click the button to listen on Spotiwhy app.</p>
+          <h2 class="card-title font-bold">{name}</h2>
+          <h3>Price: ${price} TK</h3>
+          <h3><span className='font-bold'>quantity : </span>{quantity}</h3>
+          <p><span className='font-bold'>Description : </span>{description.slice(0, 50)}</p>
           <div class="card-actions justify-end">
-            <button class="btn btn-primary">Listen</button>
+            <button onClick={() => handlePurchase(_id)} class="btn btn-primary">Book Now</button>
           </div>
         </div>
       </div>

@@ -16,7 +16,7 @@ const Home = () => {
   return (
     <div className='mx-12'>
       <Banner></Banner>
-      <h1 className='text-center text-2xl my-10'>MOTO <span className='text-orange-500 font-bold'>PARTS</span></h1>
+      <h1 className='text-center text-2xl mb-10'>MOTO <span className='text-orange-500 font-bold'>PARTS</span></h1>
       <div className='grid grid-cols-1 lg:grid-cols-2 gap-5'>
         {
           SixPartsed.map(parts => <SixParts
