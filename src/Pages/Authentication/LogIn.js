@@ -1,17 +1,43 @@
 import React from 'react';
 import Social from './Social';
 import { useForm } from "react-hook-form";
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+import Loading from '../Loading/Loading';
+import { Link } from 'react-router-dom';
 
 const LogIn = () => {
   const { register, formState: { errors }, handleSubmit } = useForm();
+
+  const [
+    signInWithEmailAndPassword,
+    user,
+    loading,
+    error,
+  ] = useSignInWithEmailAndPassword(auth);
+
+
+  if (loading) {
+    return <Loading></Loading>
+  }
+  let signInError;
+
+  if (error) {
+    signInError = <p className='text-red-500'>{error.message}</p>
+
+  }
+
+
   const onSubmit = data => {
+
+    signInWithEmailAndPassword(data.email, data.password)
     console.log(data)
   };
   return (
     <div className='flex justify-center items-center'>
       <div class="card w-96 bg-base-100 shadow-xl">
         <div class="card-body">
-          <h2 class="text-center font-bold">Log In</h2>
+          <h2 class="text-center text-2xl font-bold">Log In</h2>
           <form onSubmit={handleSubmit(onSubmit)}>
 
             <div className="form-control w-full max-w-xs">
@@ -67,10 +93,12 @@ const LogIn = () => {
             </div>
 
 
-
+            {signInError}
 
             <input className='btn w-full max-w-xs' type="submit" value='Log In' />
           </form>
+
+          <p><small>New to Moto Parts Factory site <Link className='text-primary' to="/register">Create a new Account</Link></small></p>
 
 
           <Social></Social>
