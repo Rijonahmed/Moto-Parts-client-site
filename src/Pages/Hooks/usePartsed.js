@@ -5,7 +5,7 @@ const usePartsed = () => {
   const [partsed, setPartsed] = useState([]);
 
   useEffect(() => {
-    fetch('bikeinfo.json')
+    fetch('http://localhost:5000/parts')
       .then(res => res.json())
       .then(data => setPartsed(data))
   }, [])

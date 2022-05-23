@@ -2,11 +2,16 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Loading from '../Loading/Loading';
 import Social from './Social';
 
 const Register = () => {
+
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  let form = location.state?.from?.pathname || "/";
   const { register, formState: { errors }, handleSubmit } = useForm();
 
   const [
@@ -24,7 +29,13 @@ const Register = () => {
     await updateProfile({ displayName: data.name });
 
 
+
+
   };
+
+  if (user) {
+    navigate(form, { replace: true });
+  }
 
   if (loading || updating) {
     return <Loading></Loading>
