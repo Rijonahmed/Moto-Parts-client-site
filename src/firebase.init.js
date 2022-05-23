@@ -12,12 +12,7 @@ const firebaseConfig = {
   storageBucket: process.env.REACT_APP_storageBucket,
   messagingSenderId: process.env.REACT_APP_messagingSenderId,
   appId: process.env.REACT_APP_appId
-  // apiKey: "AIzaSyDupSAedigIjbuUwo08HmeredJgK0VK_t8",
-  // authDomain: "moto-parts-62e64.firebaseapp.com",
-  // projectId: "moto-parts-62e64",
-  // storageBucket: "moto-parts-62e64.appspot.com",
-  // messagingSenderId: "1042349067560",
-  // appId: "1:1042349067560:web:6a54440bc1eef7be6f541d"
+
 };
 
 // Initialize Firebase
