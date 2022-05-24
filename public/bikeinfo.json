@@ -1,78 +1,50 @@
 [
   {
-    "_id": "1",
     "name": "Fork / Suspension",
     "price": 5000,
     "quantity": 2000,
+    "minimumOrderQuantity": 50,
     "description": "All our fork assembly's come pre filled with oil and fully assembled.",
     "images": "https://www.chinesemotorcyclepartsonline.co.uk/images/partimages/155202081_none_600.jpg"
   },
   {
-    "_id": "2",
     "name": "piston motor",
     "price": 2000,
     "quantity": 3000,
+    "minimumOrderQuantity": 60,
     "description": "ms ms50 hydraulic piston motor parts parkerpoclain hydraulic piston motor parts parkerms ms50 ston motor- YWEP",
     "images": "https://img.hzpt.com/uploads/images/sprocketpulleygearbox-ali/H3ce81ae6f1764f969593cbeac4ecf512Q.jpg"
   },
   {
-    "_id": "3",
     "name": "Splendor Gear Lever",
     "price": 700,
     "quantity": 3500,
+    "minimumOrderQuantity": 70,
     "description": "Material is MS,Thickness is 2-4mm,Weight-1 Kg,Hardness-60%",
     "images": "https://5.imimg.com/data5/VD/HU/MY-49377325/splendor-gear-lever-500x500.jpg"
   },
   {
-    "_id": "4",
     "name": "PFM 310mm Disc",
     "price": 3000,
     "quantity": 7000,
+    "minimumOrderQuantity": 50,
     "description": "310 mm steel dirt bike motor front brake disc for 110cc/125cc Pit bike parts Cheap Mini motocross brake disk",
     "images": "http://www.supermotodaz.co.uk/images/profileddisc.jpg"
   },
   {
-    "_id": "5",
     "name": "Side Stand",
     "price": 1500,
     "quantity": 2500,
+    "minimumOrderQuantity": 80,
     "description": "Side Stand Motorcycle Parts Wholesale for HAOJIN HJ 125-HJ 150",
     "images": "https://www.ubuy.co.it/productimg/?image=aHR0cHM6Ly9pbWFnZXMtbmEuc3NsLWltYWdlcy1hbWF6b24uY29tL2ltYWdlcy9JLzUxblpBY0ZDLTlMLl9TUzQwMF8uanBn.jpg"
   },
   {
-    "_id": "6",
     "name": "kick Lever",
     "price": 500,
     "quantity": 4000,
+    "minimumOrderQuantity": 90,
     "description": "Motorcycle Kick Start Lever Scooter Pedal Kick Starter Motorbike Brake Accessories",
     "images": "https://4.imimg.com/data4/LM/QP/MY-24366597/bike-kick-lever-500x500.jpg"
-  },
-  {
-    "_id": "7",
-    "name": "Kawasaki Ninja 125",
-    "price": "499,000 Tk",
-    "quantity": "1500",
-    "images": "https://www.banglamotor.net/images/kawasaki/kawasaki-ninja-125-first1.jpg"
-  },
-  {
-    "_id": "8",
-    "name": "KTM Duke 125",
-    "price": "470,000 Tk",
-    "quantity": "6000",
-    "images": "https://www.banglamotor.net/images/ktm/ktm-125-duke-first1.jpg"
-  },
-  {
-    "_id": "9",
-    "name": "Aprilia GPR 150",
-    "price": "371,000 Tk",
-    "quantity": "5000",
-    "images": "https://www.banglamotor.net/images/aprilia/aprilia-gpr-150-image1.jpg"
-  },
-  {
-    "_id": "10",
-    "name": "Yamaha R15M ",
-    "price": "505,000 Tk",
-    "quantity": "3000",
-    "images": "https://www.banglamotor.net/images/yamaha/yamaha-r15m-image01.jpg"
   }
 ]
