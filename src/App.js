@@ -13,6 +13,7 @@ import ManageAllOrder from './Pages/Dashboard/ManageAllOrder';
 import ManageProduct from './Pages/Dashboard/ManageProduct';
 import MyOrder from './Pages/Dashboard/MyOrder';
 import MyProfile from './Pages/Dashboard/MyProfile';
+import Payment from './Pages/Dashboard/Payment';
 import BusinessSummary from './Pages/Home/BusinessSummary';
 import Home from './Pages/Home/Home';
 import Reviews from './Pages/Home/Reviews';
@@ -54,6 +55,7 @@ function App() {
           <Route index element={<MyProfile></MyProfile>}></Route>
           <Route path='myOrder' element={<MyOrder></MyOrder>}></Route>
           <Route path='addReview' element={<AddReview></AddReview>}></Route>
+          <Route path='payment/:id' element={<Payment></Payment>}></Route>
           <Route path='allUser' element={<AllUser></AllUser>}></Route>
           <Route path='manageProduct' element={<ManageProduct></ManageProduct>}></Route>
           <Route path='addProduct' element={<AddProduct></AddProduct>}></Route>
