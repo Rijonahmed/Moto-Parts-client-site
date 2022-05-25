@@ -5,13 +5,14 @@ import auth from '../../firebase.init';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Loading from '../Loading/Loading';
 import Social from './Social';
+import useToken from '../Hooks/useToken';
 
 const Register = () => {
 
   const navigate = useNavigate();
   const location = useLocation();
 
-  let form = location.state?.from?.pathname || "/";
+
   const { register, formState: { errors }, handleSubmit } = useForm();
 
   const [
@@ -31,10 +32,13 @@ const Register = () => {
 
 
 
+
   };
 
+  const [token] = useToken(user);
+
   if (user) {
-    navigate(form, { replace: true });
+    navigate('/home')
   }
 
   if (loading || updating) {

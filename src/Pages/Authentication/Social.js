@@ -1,12 +1,15 @@
 import React from 'react';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import useToken from '../Hooks/useToken';
 import Loading from '../Loading/Loading';
 
 const Social = () => {
   const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
-  if (user) {
-    console.log(user);
+
+  const [token] = useToken(user);
+  if (token) {
+    console.log(token);
   }
   if (loading) {
     return <Loading></Loading>

@@ -6,6 +6,7 @@ import LogIn from './Pages/Authentication/LogIn';
 import Register from './Pages/Authentication/Register';
 import RequireAuth from './Pages/Authentication/RequireAuth';
 import AddReview from './Pages/Dashboard/AddReview';
+import AllUser from './Pages/Dashboard/AllUser';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import MyOrder from './Pages/Dashboard/MyOrder';
 import MyProfile from './Pages/Dashboard/MyProfile';
@@ -50,6 +51,7 @@ function App() {
           <Route index element={<MyProfile></MyProfile>}></Route>
           <Route path='myOrder' element={<MyOrder></MyOrder>}></Route>
           <Route path='addReview' element={<AddReview></AddReview>}></Route>
+          <Route path='allUser' element={<AllUser></AllUser>}></Route>
 
 
         </Route>
