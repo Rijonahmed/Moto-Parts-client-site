@@ -5,9 +5,12 @@ import './App.css';
 import LogIn from './Pages/Authentication/LogIn';
 import Register from './Pages/Authentication/Register';
 import RequireAuth from './Pages/Authentication/RequireAuth';
+import AddProduct from './Pages/Dashboard/AddProduct';
 import AddReview from './Pages/Dashboard/AddReview';
 import AllUser from './Pages/Dashboard/AllUser';
 import Dashboard from './Pages/Dashboard/Dashboard';
+import ManageAllOrder from './Pages/Dashboard/ManageAllOrder';
+import ManageProduct from './Pages/Dashboard/ManageProduct';
 import MyOrder from './Pages/Dashboard/MyOrder';
 import MyProfile from './Pages/Dashboard/MyProfile';
 import BusinessSummary from './Pages/Home/BusinessSummary';
@@ -52,6 +55,9 @@ function App() {
           <Route path='myOrder' element={<MyOrder></MyOrder>}></Route>
           <Route path='addReview' element={<AddReview></AddReview>}></Route>
           <Route path='allUser' element={<AllUser></AllUser>}></Route>
+          <Route path='manageProduct' element={<ManageProduct></ManageProduct>}></Route>
+          <Route path='addProduct' element={<AddProduct></AddProduct>}></Route>
+          <Route path='manageAllOrder' element={<ManageAllOrder></ManageAllOrder>}></Route>
 
 
         </Route>

@@ -38,13 +38,6 @@ const Purchase = () => {
 
   }
 
-
-
-
-
-
-
-
   // mongo db booking section
   const handleBooking = e => {
     e.preventDefault();
@@ -77,6 +70,8 @@ const Purchase = () => {
         toast.success('your booking success')
 
       })
+
+    e.target.reset()
 
 
   }
