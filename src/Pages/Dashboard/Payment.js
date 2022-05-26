@@ -40,7 +40,7 @@ const Payment = () => {
             <h1 class="text-4xl font-bold pb-10 text-center">My Profile...</h1>
 
             <Elements stripe={stripePromise}>
-              <CheckoutForm />
+              <CheckoutForm parts={parts} />
             </Elements>
 
 

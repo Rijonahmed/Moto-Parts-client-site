@@ -19,7 +19,7 @@ const AddProduct = () => {
       description: data.description
 
     }
-    console.log(addParts)
+
 
     fetch('http://localhost:5000/parts', {
       method: 'POST',

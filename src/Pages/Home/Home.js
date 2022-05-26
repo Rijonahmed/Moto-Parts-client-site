@@ -12,7 +12,7 @@ const Home = () => {
   const [reviews] = useReviews();
 
   const SixPartsed = partsed.slice(0, 6);
-  const threeReviews = reviews.slice(0, 3);
+
   return (
     <div className='mx-12'>
       <Banner></Banner>
@@ -32,7 +32,7 @@ const Home = () => {
         <h2 className='text-2xl font-bold text-center'>MOTO PARTS <span className='text-orange-500'>REVIEWS</span></h2>
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-5'>
           {
-            threeReviews.map(review => <ThreeReviews
+            reviews.map(review => <ThreeReviews
               key={review.id}
               review={review}
             ></ThreeReviews>)

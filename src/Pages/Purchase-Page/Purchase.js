@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 
@@ -8,6 +8,7 @@ import auth from '../../firebase.init';
 const Purchase = () => {
 
   const [user, loading, error] = useAuthState(auth);
+  const navigate = useNavigate()
 
   const { purchaseId } = useParams();
   const [totalPrice, setTotalPrice] = useState();
@@ -68,6 +69,7 @@ const Purchase = () => {
       .then(res => res.json())
       .then(data => {
         toast.success('your booking success')
+        navigate('/home')
 
       })
 
@@ -106,7 +108,7 @@ const Purchase = () => {
 
             <div class="form-control w-full max-w-xs">
               <label class="label">
-                <span class="label-text">Your Product name </span>
+                <span class="label-text">Your Ordet Product name </span>
 
               </label>
               <input type="text" disabled value={name} className="input input-bordered input-accent w-full max-w-xs" />
