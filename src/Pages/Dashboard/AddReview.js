@@ -10,6 +10,8 @@ const AddReview = () => {
   const [user, loading, error] = useAuthState(auth);
   const [rating, setRating] = useState();
 
+  console.log(user)
+
 
   const { register, formState: { errors }, handleSubmit, reset } = useForm();
 
@@ -25,7 +27,8 @@ const AddReview = () => {
     const review = {
       userName: user.displayName,
       userReviews: data.reviews,
-      rating: rating
+      rating: rating,
+      photoURL: user.photoURL
 
     }
 

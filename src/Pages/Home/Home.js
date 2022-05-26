@@ -3,6 +3,7 @@ import usePartsed from '../Hooks/usePartsed';
 import useReviews from '../Hooks/useReviews';
 import Banner from './Banner';
 import BusinessSummary from './BusinessSummary';
+import Rechart from './Rechart';
 import SixParts from './SixParts';
 import ThreeReviews from './ThreeReviews';
 
@@ -27,6 +28,13 @@ const Home = () => {
       </div>
 
       <BusinessSummary></BusinessSummary>
+
+
+      <Rechart></Rechart>
+
+
+
+
 
       <div className='my-8'>
         <h2 className='text-2xl font-bold text-center'>MOTO PARTS <span className='text-orange-500'>REVIEWS</span></h2>

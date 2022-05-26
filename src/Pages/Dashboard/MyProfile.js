@@ -55,13 +55,10 @@ const MyProfile = () => {
 
   return (
     <div>
-      <h1>My Profile</h1>
-
-
-
 
 
       <div class="hero min-h-screen ">
+
         <div class="hero-content grid grid-cols-1 lg:grid-cols-2">
           <div>
 
