@@ -58,9 +58,9 @@ const AddReview = () => {
   return (
     <div className='mx-auto w-1/2'>
 
-      <div class="card w-96 bg-base-100 shadow-xl">
-        <div class="card-body">
-          <h2 class="text-center text-xl font-bold">Please Add Review</h2>
+      <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card-body">
+          <h2 className="text-center text-xl font-bold">Please Add Review</h2>
 
 
 
@@ -76,7 +76,7 @@ const AddReview = () => {
 
 
 
-            <textarea name='reviews' class="textarea textarea-bordered h-8 w-full max-w-xs mt-5" placeholder="Please Type Your Reviews "  {...register("reviews")} required></textarea>
+            <textarea name='reviews' className="textarea textarea-bordered h-8 w-full max-w-xs mt-5" placeholder="Please Type Your Reviews "  {...register("reviews")} required></textarea>
 
             <ReactStars
               size={30}

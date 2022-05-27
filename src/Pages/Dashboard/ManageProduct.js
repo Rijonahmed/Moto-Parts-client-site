@@ -44,8 +44,8 @@ const ManageProduct = () => {
     <div className='ml-8'>
       <h1>My Order {partsed.length}</h1>
 
-      <div class="overflow-x-auto">
-        <table class="table w-full">
+      <div className="overflow-x-auto">
+        <table className="table w-full">
           <thead>
             <tr>
               <th></th>
@@ -61,15 +61,15 @@ const ManageProduct = () => {
             {
               partsed.map((parts, index) => <tr>
                 <th>{index + 1}</th>
-                <td><div class="avatar">
-                  <div class="w-14 rounded">
+                <td><div className="avatar">
+                  <div className="w-14 rounded">
                     <img src={parts.images} alt="parts images" />
                   </div>
                 </div></td>
                 <td>{parts.name}</td>
                 <td>{parts.price}</td>
                 <td>{parts.quantity}</td>
-                <td><button onClick={() => handleDelete(parts._id)} class="btn btn-sm btn-outline btn-error">delete</button></td>
+                <td><button onClick={() => handleDelete(parts._id)} className="btn btn-sm btn-outline btn-error">delete</button></td>
               </tr>)
             }
 

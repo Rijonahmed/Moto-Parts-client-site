@@ -87,13 +87,13 @@ const Purchase = () => {
     <div className='lg:w-6/12 m-auto'>
 
 
-      <div class="card grid grid-cols-1 lg:grid-cols-2 bg-base-100 shadow-xl">
+      <div className="card grid grid-cols-1 lg:grid-cols-2 bg-base-100 shadow-xl">
         <div className='border-r-2'>
-          <figure class="px-10 pt-10 ">
-            <img src={images} alt="Shoes" class=" w-6/12 border-2 border-green-700" />
+          <figure className="px-10 pt-10 ">
+            <img src={images} alt="Shoes" className=" w-6/12 border-2 border-green-700" />
           </figure>
-          <div class="card-body items-center text-center">
-            <h2 class="text-3xl font-bold">{name}</h2>
+          <div className="card-body items-center text-center">
+            <h2 className="text-3xl font-bold">{name}</h2>
             <p>Per unit Price : {price}</p>
             <p>Available Quantity : {quantity}</p>
             <p>Minimum Order Quantity: {minimumOrderQuantity}</p>
@@ -101,39 +101,39 @@ const Purchase = () => {
 
           </div>
         </div>
-        <div class="card-body">
-          <h2 class="card-title">Your Order Quantity</h2>
+        <div className="card-body">
+          <h2 className="card-title">Your Order Quantity</h2>
 
           <form onSubmit={handleBooking} className='grid grid-cols-1 gap-3 justify-items-center mt-3'>
 
-            <div class="form-control w-full max-w-xs">
-              <label class="label">
-                <span class="label-text">Your Ordet Product name </span>
+            <div className="form-control w-full max-w-xs">
+              <label className="label">
+                <span className="label-text">Your Ordet Product name </span>
 
               </label>
               <input type="text" disabled value={name} className="input input-bordered input-accent w-full max-w-xs" />
 
             </div>
 
-            <div class="form-control w-full max-w-xs">
-              <label class="label">
-                <span class="label-text">Your Email Address</span>
+            <div className="form-control w-full max-w-xs">
+              <label className="label">
+                <span className="label-text">Your Email Address</span>
 
               </label>
               <input type="email" name='email' disabled value={user?.email} className="input input-bordered input-accent w-full max-w-xs" />
             </div>
 
-            <div class="form-control w-full max-w-xs">
-              <label class="label">
-                <span class="label-text">Your Name</span>
+            <div className="form-control w-full max-w-xs">
+              <label className="label">
+                <span className="label-text">Your Name</span>
 
               </label>
               <input type="text" name='name' disabled value={user?.displayName} className="input input-bordered input-accent w-full max-w-xs" />
             </div>
 
-            <div class="form-control w-full max-w-xs">
-              <label class="label">
-                <span class="label-text">Your total booking Price</span>
+            <div className="form-control w-full max-w-xs">
+              <label className="label">
+                <span className="label-text">Your total booking Price</span>
 
               </label>
               <input type="number" disabled value={totalPrice} className="input input-bordered input-accent w-full max-w-xs" />
@@ -141,9 +141,9 @@ const Purchase = () => {
             </div>
 
 
-            <div class="form-control w-full max-w-xs">
-              <label class="label">
-                <span class="label-text">Your product Quantity</span>
+            <div className="form-control w-full max-w-xs">
+              <label className="label">
+                <span className="label-text">Your product Quantity</span>
 
               </label>
               <input onChange={handleQuantity} name='quantity' placeholder={`Minimum Order ${minimumOrderQuantity}`} type="number" className="input input-bordered input-accent w-full max-w-xs" required />
@@ -155,20 +155,20 @@ const Purchase = () => {
 
 
 
-            <div class="form-control w-full max-w-xs">
-              <label class="label">
-                <span class="label-text">please type your Phone number</span>
+            <div className="form-control w-full max-w-xs">
+              <label className="label">
+                <span className="label-text">please type your Phone number</span>
 
               </label>
               <input type="number" name='phone' placeholder="Phone" className="input input-bordered input-accent w-full max-w-xs" required />
             </div>
 
-            <div class="form-control w-full max-w-xs">
-              <label class="label">
-                <span class="label-text">please type your Address</span>
+            <div className="form-control w-full max-w-xs">
+              <label className="label">
+                <span className="label-text">please type your Address</span>
 
               </label>
-              <textarea name='address' class="textarea textarea-bordered h-18" placeholder="Address" required></textarea>
+              <textarea name='address' className="textarea textarea-bordered h-18" placeholder="Address" required></textarea>
             </div>
 
             <input type="submit" value="Submit" disabled={(minimumOrderQuantity > userQuantity || userQuantity > quantity)} className="btn btn-secondary w-full max-w-xs" />

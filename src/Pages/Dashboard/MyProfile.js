@@ -57,9 +57,9 @@ const MyProfile = () => {
     <div>
 
 
-      <div class="hero min-h-screen ">
+      <div className="hero min-h-screen ">
 
-        <div class="hero-content grid grid-cols-1 lg:grid-cols-2">
+        <div className="hero-content grid grid-cols-1 lg:grid-cols-2">
           <div>
 
             <form onSubmit={handleSubmit(onSubmit)}>
@@ -99,21 +99,21 @@ const MyProfile = () => {
 
               </div>
 
-              <div class="form-control w-full max-w-xs">
-                <label class="label">
-                  <span class="label-text">please type your Education Info</span>
+              <div className="form-control w-full max-w-xs">
+                <label className="label">
+                  <span className="label-text">please type your Education Info</span>
 
                 </label>
-                <textarea name='education' class="textarea textarea-bordered h-8" placeholder="Education"  {...register("education")} required ></textarea>
+                <textarea name='education' className="textarea textarea-bordered h-8" placeholder="Education"  {...register("education")} required ></textarea>
               </div>
 
 
-              <div class="form-control w-full max-w-xs">
-                <label class="label">
-                  <span class="label-text">please type your Address</span>
+              <div className="form-control w-full max-w-xs">
+                <label className="label">
+                  <span className="label-text">please type your Address</span>
 
                 </label>
-                <textarea name='address' class="textarea textarea-bordered h-8" placeholder="Address"  {...register("address")} required></textarea>
+                <textarea name='address' className="textarea textarea-bordered h-8" placeholder="Address"  {...register("address")} required></textarea>
               </div>
 
 
@@ -124,12 +124,12 @@ const MyProfile = () => {
 
           </div>
           <div className='mx-4'>
-            <h1 class="text-4xl font-bold pb-10 text-center">My Profile...</h1>
-            <h1 class="text-3xl font-bold">Name : {user?.displayName}</h1>
-            <p class="py-4"><span className='font-bold'>Email Address : </span>{user?.email}</p>
-            <p class="py-4"><span className='font-bold'>Phone Number : </span>{profileData.phone}</p>
-            <p class="py-4"><span className='font-bold'>Education : </span>{profileData.education}</p>
-            <p class="py-4"><span className='font-bold'>Address : </span>{profileData.address}</p>
+            <h1 className="text-4xl font-bold pb-10 text-center">My Profile...</h1>
+            <h1 className="text-3xl font-bold">Name : {user?.displayName}</h1>
+            <p className="py-4"><span className='font-bold'>Email Address : </span>{user?.email}</p>
+            <p className="py-4"><span className='font-bold'>Phone Number : </span>{profileData.phone}</p>
+            <p className="py-4"><span className='font-bold'>Education : </span>{profileData.education}</p>
+            <p className="py-4"><span className='font-bold'>Address : </span>{profileData.address}</p>
 
           </div>
         </div>

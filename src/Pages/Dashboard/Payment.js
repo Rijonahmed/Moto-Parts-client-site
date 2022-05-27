@@ -26,10 +26,10 @@ const Payment = () => {
     <div>
 
 
-      <div class="m-5">
-        <div class="hero-content grid grid-cols-1 lg:grid-cols-2">
+      <div className="m-5">
+        <div className="hero-content grid grid-cols-1 lg:grid-cols-2">
           <div>
-            <h1 class="text-xl font-bold">Product Name : {parts.partsNmae}</h1>
+            <h1 className="text-xl font-bold">Product Name : {parts.partsNmae}</h1>
             <p className='text-xl'>Total Price : {parts.totalPrice}</p>
 
 
@@ -37,7 +37,7 @@ const Payment = () => {
 
           </div>
           <div className='mx-4'>
-            <h1 class="text-4xl font-bold pb-10 text-center">My Profile...</h1>
+            <h1 className="text-4xl font-bold pb-10 text-center">My Profile...</h1>
 
             <Elements stripe={stripePromise}>
               <CheckoutForm parts={parts} />

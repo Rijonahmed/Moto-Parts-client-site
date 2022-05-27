@@ -1,16 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import myImages from '../../image/rijon.jpg'
 
 const MyPortfolio = () => {
   return (
     <div>
+      <h1 className='text-3xl font-bold text-center mt-5'>MY <span className='text-orange-500'>MyPortfolio</span></h1>
 
-      <div class="card w-96 m-auto bg-base-100 shadow-xl mt-14">
-        <figure class="px-10 pt-10">
+      <div className="card w-96 m-auto bg-base-100 shadow-xl mt-14">
+        <figure className="px-10 pt-10">
           <img className='rounded-full w-2/4 items-center' src={myImages} alt="" />
         </figure>
-        <div class="card-body items-center text-center">
+        <div className="card-body items-center text-center">
           <h1 className='text-2xl font-bold'>Rijon Ahned</h1>
           <h4 className='text-xl'>Email Address : rijon036@gmail.com</h4>
 
@@ -19,7 +19,7 @@ const MyPortfolio = () => {
       <div className='grid grid-cols-1 lg:grid-cols-2 gap-5 mx-12'>
 
 
-        <div class="card bg-base-100 shadow-xl my-20">
+        <div className="card bg-base-100 shadow-xl my-20">
           <span className='card-body'>
             <h1 className='text-xl m-8 font-bold'>List of technologies or skills that to me as a web developer.</h1>
 
@@ -40,8 +40,8 @@ const MyPortfolio = () => {
         </div>
 
 
-        <div class="card bg-base-100 shadow-xl my-20">
-          <div class="card-body">
+        <div className="card bg-base-100 shadow-xl my-20">
+          <div className="card-body">
             <h1 className='text-2xl font-bold'>Educational background</h1>
             <h4 className='text-xl'>&#8226; SSC batch-2017 from Amirjan High School in Dumni, Khilkhet, Dhaka</h4>
             <h4 className='text-xl'>&#8226; HSC batch-2019 from Amirjan College in Dumni, Khilkhet, Dhaka</h4>

@@ -32,9 +32,9 @@ const Social = () => {
   return (
 
     <div>
-      <div class="divider w-full">OR</div>
+      <div className="divider w-full">OR</div>
       {signInError}
-      <button onClick={() => signInWithGoogle()} class="btn btn-outline w-full ">Continue with google</button>
+      <button onClick={() => signInWithGoogle()} className="btn btn-outline w-full ">Continue with google</button>
     </div>
 
 

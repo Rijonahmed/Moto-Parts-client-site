@@ -109,12 +109,12 @@ const AddProduct = () => {
 
         </div>
 
-        <div class="form-control w-full max-w-xs">
-          <label class="label">
-            <span class="label-text">Description</span>
+        <div className="form-control w-full max-w-xs">
+          <label className="label">
+            <span className="label-text">Description</span>
 
           </label>
-          <textarea name='description' class="textarea textarea-bordered h-8" placeholder="Description"  {...register("description")} required></textarea>
+          <textarea name='description' className="textarea textarea-bordered h-8" placeholder="Description"  {...register("description")} required></textarea>
         </div>
 
 
