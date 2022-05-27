@@ -12,7 +12,7 @@ const MyProfile = () => {
   const [isReload, setIsReload] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/myProfile/${user.email}`)
+    fetch(`https://powerful-eyrie-01032.herokuapp.com/myProfile/${user.email}`)
       .then(res => res.json())
       .then(data => setProfileData(data))
   }, [isReload])
@@ -33,7 +33,7 @@ const MyProfile = () => {
     }
     console.log(profile)
 
-    fetch('http://localhost:5000/myProfile', {
+    fetch('https://powerful-eyrie-01032.herokuapp.com/myProfile', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'

@@ -21,7 +21,7 @@ const AddProduct = () => {
     }
 
 
-    fetch('http://localhost:5000/parts', {
+    fetch('https://powerful-eyrie-01032.herokuapp.com/parts', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'

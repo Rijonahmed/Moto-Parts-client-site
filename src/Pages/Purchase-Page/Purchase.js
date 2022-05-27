@@ -15,7 +15,7 @@ const Purchase = () => {
   const [userQuantity, setUserQuantity] = useState();
 
   const [singleParts, setSingleParts] = useState({});
-  const url = `http://localhost:5000/parts/${purchaseId}`
+  const url = `https://powerful-eyrie-01032.herokuapp.com/parts/${purchaseId}`
 
 
   useEffect(() => {
@@ -58,7 +58,7 @@ const Purchase = () => {
 
     }
 
-    fetch('http://localhost:5000/booking', {
+    fetch('https://powerful-eyrie-01032.herokuapp.com/booking', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'

@@ -18,7 +18,7 @@ const CheckoutForm = ({ parts }) => {
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads
 
-    fetch("http://localhost:5000/create-payment-intent", {
+    fetch("https://powerful-eyrie-01032.herokuapp.com/create-payment-intent", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ totalPrice }),

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
-import usePartsed from '../Hooks/usePartsed';
 
 const ManageProduct = () => {
 
@@ -9,7 +8,7 @@ const ManageProduct = () => {
 
 
   useEffect(() => {
-    fetch('http://localhost:5000/parts')
+    fetch('https://powerful-eyrie-01032.herokuapp.com/parts')
       .then(res => res.json())
       .then(data => setPartsed(data))
   }, [isReload])
@@ -21,7 +20,7 @@ const ManageProduct = () => {
     const prosceed = window.confirm('Are you sure?');
     if (prosceed) {
 
-      const url = `http://localhost:5000/parts/${id}`;
+      const url = `https://powerful-eyrie-01032.herokuapp.com/parts/${id}`;
 
 
       fetch(url, {
