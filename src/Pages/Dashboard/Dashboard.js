@@ -15,13 +15,10 @@ const Dashboard = () => {
 
         <Outlet></Outlet>
 
-        {/* <!-- Page content here --> */}
-        <label for="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
-
       </div>
       <div className="drawer-side ">
         <label for="my-drawer-2" className="drawer-overlay"></label>
-        <ul className="menu p-4 overflow-y-auto w-48 bg-base-100 text-base-content mt-6 ">
+        <ul className="menu p-4 overflow-y-auto w-48 bg-base-100 lg:bg-transparent text-base-content mt-6 ">
           {/* <!-- Sidebar content here --> */}
           <li><Link to='/dashboard'>My Profile</Link></li>
           {!admin && <li><Link to='/dashboard/myOrder'>My Order</Link></li>}

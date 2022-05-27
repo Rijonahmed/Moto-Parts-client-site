@@ -4,6 +4,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 import LogIn from './Pages/Authentication/LogIn';
 import Register from './Pages/Authentication/Register';
+import RequireAdmin from './Pages/Authentication/RequireAdmin';
 import RequireAuth from './Pages/Authentication/RequireAuth';
 import AddProduct from './Pages/Dashboard/AddProduct';
 import AddReview from './Pages/Dashboard/AddReview';
@@ -56,9 +57,9 @@ function App() {
           <Route path='myOrder' element={<MyOrder></MyOrder>}></Route>
           <Route path='addReview' element={<AddReview></AddReview>}></Route>
           <Route path='payment/:id' element={<Payment></Payment>}></Route>
-          <Route path='allUser' element={<AllUser></AllUser>}></Route>
-          <Route path='manageProduct' element={<ManageProduct></ManageProduct>}></Route>
-          <Route path='addProduct' element={<AddProduct></AddProduct>}></Route>
+          <Route path='allUser' element={<RequireAdmin><AllUser></AllUser></RequireAdmin>}></Route>
+          <Route path='manageProduct' element={<RequireAdmin><ManageProduct></ManageProduct></RequireAdmin>}></Route>
+          <Route path='addProduct' element={<RequireAdmin><AddProduct></AddProduct></RequireAdmin>}></Route>
           <Route path='manageAllOrder' element={<ManageAllOrder></ManageAllOrder>}></Route>
 
 

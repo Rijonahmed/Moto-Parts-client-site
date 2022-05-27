@@ -1,6 +1,7 @@
 import React from 'react';
 import usePartsed from '../Hooks/usePartsed';
 import useReviews from '../Hooks/useReviews';
+import About from './About';
 import Banner from './Banner';
 import BusinessSummary from './BusinessSummary';
 import Rechart from './Rechart';
@@ -30,7 +31,14 @@ const Home = () => {
       <BusinessSummary></BusinessSummary>
 
 
-      <Rechart></Rechart>
+      <div className='hidden lg:block'>
+        <Rechart></Rechart>
+      </div>
+
+      <div>
+        <h1 className='text-center text-3xl font-bold'>About</h1>
+        <About></About>
+      </div>
 
 
 
@@ -41,7 +49,7 @@ const Home = () => {
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-5'>
           {
             reviews.map(review => <ThreeReviews
-              key={review.id}
+              key={review._id}
               review={review}
             ></ThreeReviews>)
           }

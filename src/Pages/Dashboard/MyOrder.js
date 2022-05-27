@@ -47,8 +47,8 @@ const MyOrder = () => {
                 <td>{order.phone}</td>
                 <td>{order.address}</td>
                 <td>
-                  {(order.totalPrice && !order.paid) && <Link to={`/dashboard/payment/${order._id}`}><button className='btn btn-sm btn-success'>buy</button></Link>}
-                  {(order.totalPrice && order.paid) && <span className='text-success'>paid</span>}
+                  {/* {(order.totalPrice && !order.paid) && <Link to={`/dashboard/payment/${order._id}`}><button className='btn btn-sm btn-success'>buy</button></Link>}
+                  {(order.totalPrice && order.paid) && <span className='text-success'>paid</span>} */}
 
                 </td>
               </tr>)

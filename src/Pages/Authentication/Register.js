@@ -10,8 +10,6 @@ import useToken from '../Hooks/useToken';
 const Register = () => {
 
   const navigate = useNavigate();
-  const location = useLocation();
-
 
   const { register, formState: { errors }, handleSubmit } = useForm();
 
@@ -25,13 +23,8 @@ const Register = () => {
   const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
   const onSubmit = async data => {
-    console.log(data)
     await createUserWithEmailAndPassword(data.email, data.password);
     await updateProfile({ displayName: data.name });
-
-
-
-
 
   };
 
