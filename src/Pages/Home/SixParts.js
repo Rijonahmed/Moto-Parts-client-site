@@ -23,7 +23,7 @@ const SixParts = ({ parts }) => {
           <h3><span className='font-bold'>Minimum Order Quantity : </span>{minimumOrderQuantity}</h3>
           <p><span className='font-bold'>Description : </span>{description.slice(0, 25)}</p>
           <div className="card-actions justify-end">
-            <button onClick={() => handlePurchase(_id)} className="btn btn-primary">Book Now</button>
+            <button onClick={() => handlePurchase(_id)} className="btn btn-sm btn-outline hover:bg-primary text-primary hover:text-white">Book Now</button>
           </div>
         </div>
       </div>

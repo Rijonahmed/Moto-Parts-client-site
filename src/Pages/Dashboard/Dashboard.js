@@ -3,6 +3,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, Outlet } from 'react-router-dom';
 import auth from '../../firebase.init';
 import useAdmin from '../Hooks/useAdmin';
+import { FaUsers, FaUserTie, FaSignInAlt, FaCogs, FaCartArrowDown, FaChalkboardTeacher } from "react-icons/fa";
 
 const Dashboard = () => {
   const [user] = useAuthState(auth);
@@ -16,19 +17,19 @@ const Dashboard = () => {
         <Outlet></Outlet>
 
       </div>
-      <div className="drawer-side ">
+      <div className="drawer-side bg-primary ">
         <label for="my-drawer-2" className="drawer-overlay"></label>
-        <ul className="menu p-4 overflow-y-auto w-48 bg-base-100 lg:bg-transparent text-base-content mt-6 ">
+        <ul className="menu p-4 overflow-y-auto w-62 bg-base-100 lg:bg-transparent  mt-6 font-bold ">
           {/* <!-- Sidebar content here --> */}
-          <li><Link to='/dashboard'>My Profile</Link></li>
-          {!admin && <li><Link to='/dashboard/myOrder'>My Order</Link></li>}
-          {!admin && <li><Link to='/dashboard/addReview'>Add Review</Link></li>}
+          <li><Link to='/dashboard'><FaUserTie /> My Profile</Link></li>
+          {!admin && <li><Link to='/dashboard/myOrder'><FaCartArrowDown /> My Order</Link></li>}
+          {!admin && <li><Link to='/dashboard/addReview'><FaChalkboardTeacher /> Add Review</Link></li>}
 
           {admin && <>
-            <li><Link to='/dashboard/allUser'>All User</Link></li>
-            <li><Link to='/dashboard/manageAllOrder'>Manage All Order</Link></li>
-            <li><Link to='/dashboard/addProduct'>Add Product</Link></li>
-            <li><Link to='/dashboard/manageProduct'>Manage Product</Link></li>
+            <li><Link to='/dashboard/allUser'><FaUsers /> All User</Link></li>
+            <li><Link to='/dashboard/manageAllOrder'> Manage All Order</Link></li>
+            <li><Link to='/dashboard/addProduct'><FaSignInAlt /> Add Product</Link></li>
+            <li><Link to='/dashboard/manageProduct'><FaCogs /> Manage Product</Link></li>
 
           </>}
 

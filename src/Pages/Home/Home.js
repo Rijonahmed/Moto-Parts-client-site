@@ -16,10 +16,10 @@ const Home = () => {
   const SixPartsed = partsed.slice(0, 6);
 
   return (
-    <div className='mx-12'>
+    <div className='bg-secondary'>
       <Banner></Banner>
-      <h1 className='text-center text-2xl mb-10'>MOTO <span className='text-orange-500 font-bold'>PARTS</span></h1>
-      <div className='grid grid-cols-1 lg:grid-cols-2 gap-5'>
+      <h1 className='text-center text-2xl mb-10 font-bold'>MOTO <span className='text-orange-500 font-bold'>PARTS</span></h1>
+      <div className='grid grid-cols-1 lg:grid-cols-2 gap-5  max-w-7xl mx-auto'>
         {
           SixPartsed.map(parts => <SixParts
             key={parts._id}
