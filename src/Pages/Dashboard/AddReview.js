@@ -79,7 +79,7 @@ const AddReview = () => {
             <textarea name='reviews' className="textarea textarea-bordered h-8 w-full max-w-xs mt-5" placeholder="Please Type Your Reviews "  {...register("reviews")} required></textarea>
 
             <ReactStars
-              size={30}
+              size={40}
               count={5}
               isHalf={true}
               onChange={handleRating}

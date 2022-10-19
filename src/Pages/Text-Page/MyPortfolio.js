@@ -4,7 +4,7 @@ import myImages from '../../image/rijon.jpg'
 const MyPortfolio = () => {
   return (
     <div>
-      <h1 className='text-3xl font-bold text-center mt-5'>MY <span className='text-orange-500'>MyPortfolio</span></h1>
+      <h1 className='text-3xl font-bold text-center mt-5'>My <span className='text-orange-500'>Portfolio</span></h1>
 
       <div className="card w-96 m-auto bg-base-100 shadow-xl mt-14">
         <figure className="px-10 pt-10">

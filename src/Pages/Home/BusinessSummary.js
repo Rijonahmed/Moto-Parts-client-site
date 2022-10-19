@@ -5,7 +5,9 @@ import parts from '../../image/icon/parts.png'
 
 const BusinessSummary = () => {
   return (
-    <div >
+    <div data-aos="fade-down"
+      data-aos-easing="linear"
+      data-aos-duration="1000">
       <h2 className='text-center text-2xl font-bold my-8'>Business Summary</h2>
       <div className='grid grid-cols-1 lg:grid-cols-4 gap-5 mt-5 '>
         <div className="card card-compact max-w-max bg-base-100 shadow-xl">
