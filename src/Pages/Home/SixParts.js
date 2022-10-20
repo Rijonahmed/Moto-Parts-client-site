@@ -13,7 +13,7 @@ const SixParts = ({ parts }) => {
     <div>
       <div className="card lg:card-side bg-base-100 shadow-xl">
         <figure>
-          <img className='h-52 w-52' src={images} alt="Album" />
+          <img className='h-28 lg:h-52 w-28 lg:w-52' src={images} alt="Album" />
 
         </figure>
         <div className="card-body">

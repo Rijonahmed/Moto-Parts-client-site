@@ -5,3 +5,13 @@
 
 
 }
+
+.img-animation img {
+  animation: test 25.5s linear infinite;
+}
+
+@keyframes test {
+  100% {
+    transform: rotate(360deg);
+  }
+}
