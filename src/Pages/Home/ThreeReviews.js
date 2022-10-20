@@ -1,21 +1,130 @@
 import React from 'react';
+import { Swiper, SwiperSlide } from "swiper/react";
 
-const ThreeReviews = ({ review }) => {
-  const { userName, userReviews, rating, photoURL } = review;
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+
+import "./styles.css";
+
+// import required modules
+import { Autoplay, EffectCoverflow, Pagination } from "swiper";
+import useReviews from '../Hooks/useReviews';
+
+const ThreeReviews = () => {
+
+  const [reviews] = useReviews();
+
   return (
     <div>
-      <div className="card w-96 h-80 bg-base-100 shadow-xl">
-        <figure className="px-10 pt-10">
-          <img src={photoURL} alt='This user dose not have a pictur' className="rounded-full" />
-        </figure>
-        <div className="card-body items-center text-center">
-          <h2 className="card-title">{userName}</h2>
 
-          <p>Review Text : {userReviews}</p>
-          <h4>Rating: <span className='text-orange-600'>{rating} Star</span></h4>
+      <section className=' w-full mx-auto text-gray-700'>
+        <>
+          <Swiper
+            effect={"coverflow"}
+            grabCursor={true}
+            centeredSlides={true}
+            slidesPerView={"auto"}
+            // loop={true}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            pagination={{
+              clickable: true,
+            }}
+            coverflowEffect={{
+              rotate: 50,
+              stretch: 0,
+              depth: 100,
+              modifier: 1,
+              slideShadows: true,
+            }}
+            modules={[EffectCoverflow, Pagination, Autoplay]}
+            className="mySwiper max-w-7xl h-full"
+          >
+            {
+              reviews.map((review, index) => {
 
-        </div>
-      </div>
+                return (
+                  <div key={index} className="">
+                    <SwiperSlide className='text-center bg-white py-10 rounded-2xl px-5 space-y-2'>
+                      <h3 className="text-sm md:text-xl font-bold">{review?.userName}</h3>
+                      <img className="m-auto rounded-full" src={review?.photoURL} alt="This is user Img" />
+                      {
+
+                        review?.rating === 1 &&
+                        <div className="rating">
+                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-green-500" checked />
+                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-gray-300" />
+                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-gray-300" />
+                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-gray-300" />
+                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-gray-300" />
+                        </div>
+
+                      }
+                      {
+
+                        review?.rating === 2 &&
+                        <div className="rating">
+                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-green-500" />
+                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-green-500" checked />
+                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-gray-300" />
+                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-gray-300" />
+                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-gray-300" />
+                        </div>
+
+                      }
+                      {
+
+                        review?.rating === 3 &&
+                        <div className="rating">
+                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-green-500" />
+                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-green-500" />
+                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-green-500" checked />
+                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-gray-300" />
+                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-gray-300" />
+                        </div>
+
+                      }
+                      {
+
+                        review?.rating === 4 &&
+                        <div className="rating">
+                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-green-500" />
+                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-green-500" />
+                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-green-500" />
+                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-green-500" checked />
+                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-gray-300" />
+                        </div>
+
+                      }
+                      {
+
+                        review?.rating === 5 &&
+                        <div className="rating">
+                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-green-500" />
+                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-green-500" />
+                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-green-500" />
+                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-green-500" />
+                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-green-500" checked />
+                        </div>
+
+                      }
+
+                      <p className="text-xs break-words md:text-sm">{review?.userReviews.length > 100 ? `${review?.userReviews.slice(0, 100)}...` : review?.userReviews}</p>
+                    </SwiperSlide>
+                  </div>
+                )
+              })
+            }
+
+          </Swiper>
+        </>
+      </section>
+
+
 
     </div>
   );

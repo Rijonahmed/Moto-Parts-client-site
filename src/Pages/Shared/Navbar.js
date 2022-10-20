@@ -10,7 +10,7 @@ const Navbar = () => {
 
   };
 
-  const [user, loading, error] = useAuthState(auth);
+  const [user] = useAuthState(auth);
 
   const manuItem = <>
     <li><Link to='/home'>Home</Link></li>
