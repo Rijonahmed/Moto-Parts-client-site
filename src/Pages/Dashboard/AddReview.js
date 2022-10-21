@@ -81,7 +81,6 @@ const AddReview = () => {
             <ReactStars
               size={40}
               count={5}
-              isHalf={true}
               onChange={handleRating}
             ></ReactStars>
 

@@ -51,12 +51,12 @@ const ThreeReviews = () => {
                   <div key={index} className="">
                     <SwiperSlide className='text-center bg-white py-10 rounded-2xl px-5 space-y-2'>
                       <h3 className="text-sm md:text-xl font-bold">{review?.userName}</h3>
-                      <img className="m-auto rounded-full" src={review?.photoURL} alt="This is user Img" />
+                      <img className="m-auto w-full rounded-full" src={review?.photoURL} alt="This is user Img" />
                       {
 
                         review?.rating === 1 &&
                         <div className="rating">
-                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-green-500" checked />
+                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-primary" checked />
                           <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-gray-300" />
                           <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-gray-300" />
                           <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-gray-300" />
@@ -68,8 +68,8 @@ const ThreeReviews = () => {
 
                         review?.rating === 2 &&
                         <div className="rating">
-                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-green-500" />
-                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-green-500" checked />
+                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-primary" />
+                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-primary" checked />
                           <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-gray-300" />
                           <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-gray-300" />
                           <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-gray-300" />
@@ -80,9 +80,9 @@ const ThreeReviews = () => {
 
                         review?.rating === 3 &&
                         <div className="rating">
-                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-green-500" />
-                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-green-500" />
-                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-green-500" checked />
+                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-primary" />
+                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-primary" />
+                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-primary" checked />
                           <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-gray-300" />
                           <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-gray-300" />
                         </div>
@@ -92,10 +92,10 @@ const ThreeReviews = () => {
 
                         review?.rating === 4 &&
                         <div className="rating">
-                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-green-500" />
-                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-green-500" />
-                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-green-500" />
-                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-green-500" checked />
+                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-primary" />
+                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-primary" />
+                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-primary" />
+                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-primary" checked />
                           <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-gray-300" />
                         </div>
 
@@ -104,11 +104,11 @@ const ThreeReviews = () => {
 
                         review?.rating === 5 &&
                         <div className="rating">
-                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-green-500" />
-                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-green-500" />
-                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-green-500" />
-                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-green-500" />
-                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-green-500" checked />
+                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-primary" />
+                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-primary" />
+                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-primary" />
+                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-primary" />
+                          <input name="rating-1" className="mask mask-star w-4 md:w-6  bg-primary" checked />
                         </div>
 
                       }
