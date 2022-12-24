@@ -1,5 +1,6 @@
 import React from 'react';
 import usePartsed from '../Hooks/usePartsed';
+
 import About from './About';
 import Banner from './Banner';
 import BusinessSummary from './BusinessSummary';
@@ -18,14 +19,18 @@ const Home = () => {
     <div className='bg-secondary'>
       <Banner></Banner>
       <h1 className='text-center text-2xl mb-10 font-bold mt-10'>MOTO <span className='text-orange-500 font-bold'>PARTS</span></h1>
+
       <div className='grid grid-cols-1 lg:grid-cols-2 gap-5  max-w-7xl mx-auto'>
+
         {
           SixPartsed.map(parts => <SixParts
             key={parts._id}
             parts={parts}
           ></SixParts>)
         }
+
       </div>
+
 
       <BusinessSummary></BusinessSummary>
 
