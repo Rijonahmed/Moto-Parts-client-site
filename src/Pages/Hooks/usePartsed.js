@@ -6,7 +6,7 @@ const usePartsed = () => {
 
 
   useEffect(() => {
-    fetch('https://powerful-eyrie-01032.herokuapp.com/parts')
+    fetch('https://moto-parts-server-site.vercel.app/parts')
       .then(res => res.json())
       .then(data => setPartsed(data))
   }, [])

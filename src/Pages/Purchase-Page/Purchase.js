@@ -15,7 +15,7 @@ const Purchase = () => {
   const [userQuantity, setUserQuantity] = useState();
 
   const [singleParts, setSingleParts] = useState({});
-  const url = `https://powerful-eyrie-01032.herokuapp.com/parts/${purchaseId}`
+  const url = `https://moto-parts-server-site.vercel.app/parts/${purchaseId}`
 
 
   useEffect(() => {
@@ -58,7 +58,7 @@ const Purchase = () => {
 
     }
 
-    fetch('https://powerful-eyrie-01032.herokuapp.com/booking', {
+    fetch('https://moto-parts-server-site.vercel.app/booking', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'

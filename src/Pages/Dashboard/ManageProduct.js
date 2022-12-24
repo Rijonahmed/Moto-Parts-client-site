@@ -8,7 +8,7 @@ const ManageProduct = () => {
 
 
   useEffect(() => {
-    fetch('https://powerful-eyrie-01032.herokuapp.com/parts')
+    fetch('https://moto-parts-server-site.vercel.app/parts')
       .then(res => res.json())
       .then(data => setPartsed(data))
   }, [isReload])
@@ -20,7 +20,7 @@ const ManageProduct = () => {
     const prosceed = window.confirm('Are you sure?');
     if (prosceed) {
 
-      const url = `https://powerful-eyrie-01032.herokuapp.com/parts/${id}`;
+      const url = `https://moto-parts-server-site.vercel.app/parts/${id}`;
 
 
       fetch(url, {

@@ -34,7 +34,7 @@ const AddReview = () => {
 
 
 
-    fetch('https://powerful-eyrie-01032.herokuapp.com/reviews', {
+    fetch('https://moto-parts-server-site.vercel.app/reviews', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'
@@ -72,7 +72,6 @@ const AddReview = () => {
               {...register("name")}
               required
             />
-
 
 
 

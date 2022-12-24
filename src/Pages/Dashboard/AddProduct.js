@@ -21,7 +21,7 @@ const AddProduct = () => {
     }
 
 
-    fetch('https://powerful-eyrie-01032.herokuapp.com/parts', {
+    fetch('https://moto-parts-server-site.vercel.app/parts', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'

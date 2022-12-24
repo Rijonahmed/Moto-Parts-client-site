@@ -9,7 +9,7 @@ const useAdmin = user => {
 
     const email = user?.email;
     if (email) {
-      fetch(`https://powerful-eyrie-01032.herokuapp.com/admin/${email}`, {
+      fetch(`https://moto-parts-server-site.vercel.app/admin/${email}`, {
         method: 'GET',
         headers: {
           'content-type': 'application/json'
