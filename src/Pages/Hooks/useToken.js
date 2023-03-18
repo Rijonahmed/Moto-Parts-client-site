@@ -10,7 +10,7 @@ const useToken = user => {
     const currentUser = { email: email };
 
     if (email) {
-      fetch(`https://moto-parts-server-site.vercel.app/user/${email}`, {
+      fetch(`https://moto-parts-server-api.onrender.com/user/${email}`, {
         method: 'PUT',
         headers: {
           'content-type': 'application/json'

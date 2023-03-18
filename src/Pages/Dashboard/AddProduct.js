@@ -21,7 +21,7 @@ const AddProduct = () => {
     }
 
 
-    fetch('https://moto-parts-server-site.vercel.app/parts', {
+    fetch('https://moto-parts-server-api.onrender.com/parts', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'

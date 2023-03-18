@@ -15,7 +15,7 @@ const Purchase = () => {
   const [userQuantity, setUserQuantity] = useState();
 
   const [singleParts, setSingleParts] = useState({});
-  const url = `https://moto-parts-server-site.vercel.app/parts/${purchaseId}`
+  const url = `https://moto-parts-server-api.onrender.com/parts/${purchaseId}`
 
 
   useEffect(() => {
@@ -58,7 +58,7 @@ const Purchase = () => {
 
     }
 
-    fetch('https://moto-parts-server-site.vercel.app/booking', {
+    fetch('https://moto-parts-server-api.onrender.com/booking', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'

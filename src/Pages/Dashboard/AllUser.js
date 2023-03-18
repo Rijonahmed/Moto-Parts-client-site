@@ -4,7 +4,7 @@ import Loading from '../Loading/Loading';
 import UsersRow from './UsersRow';
 
 const AllUser = () => {
-  const { data: users, isLoading, refetch } = useQuery('users', () => fetch('https://moto-parts-server-site.vercel.app/user').then(res => res.json()))
+  const { data: users, isLoading, refetch } = useQuery('users', () => fetch('https://moto-parts-server-api.onrender.com/user').then(res => res.json()))
   if (isLoading) {
     return <Loading></Loading>
   }

@@ -34,7 +34,7 @@ const AddReview = () => {
 
 
 
-    fetch('https://moto-parts-server-site.vercel.app/reviews', {
+    fetch('https://moto-parts-server-api.onrender.com/reviews', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'

@@ -9,7 +9,7 @@ const MyOrder = () => {
 
   useEffect(() => {
     if (user) {
-      fetch(`https://moto-parts-server-site.vercel.app/booking?userEmail=${user.email}`)
+      fetch(`https://moto-parts-server-api.onrender.com/booking?userEmail=${user.email}`)
         .then(res => res.json())
         .then(data => setOrders(data))
     }

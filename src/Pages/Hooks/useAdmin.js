@@ -9,7 +9,7 @@ const useAdmin = user => {
 
     const email = user?.email;
     if (email) {
-      fetch(`https://moto-parts-server-site.vercel.app/admin/${email}`, {
+      fetch(`https://moto-parts-server-api.onrender.com/admin/${email}`, {
         method: 'GET',
         headers: {
           'content-type': 'application/json'

@@ -12,7 +12,7 @@ const stripePromise = loadStripe('pk_test_51L3PZ2CCygQfLdXCV8seUCvdM3YqHSOOpz6Oy
 
 const Payment = () => {
   const { id } = useParams();
-  const url = `https://moto-parts-server-site.vercel.app/booking/${id}`
+  const url = `https://moto-parts-server-api.onrender.com/booking/${id}`
 
   const { data: parts, isLoading } = useQuery(['booking', id], () => fetch(url, {
     method: 'GET',

@@ -8,7 +8,7 @@ const ManageProduct = () => {
 
 
   useEffect(() => {
-    fetch('https://moto-parts-server-site.vercel.app/parts')
+    fetch('https://moto-parts-server-api.onrender.com/parts')
       .then(res => res.json())
       .then(data => setPartsed(data))
   }, [isReload])
@@ -20,7 +20,7 @@ const ManageProduct = () => {
     const prosceed = window.confirm('Are you sure?');
     if (prosceed) {
 
-      const url = `https://moto-parts-server-site.vercel.app/parts/${id}`;
+      const url = `https://moto-parts-server-api.onrender.com/parts/${id}`;
 
 
       fetch(url, {
